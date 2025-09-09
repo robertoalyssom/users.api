@@ -17,7 +17,7 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: ["https://user-registration-eight-liard.vercel.app/"],
+    origin: "https://user-registration-eight-liard.vercel.app", // allow requests from this origin
     credentials: true, // allow cookies to be sent with the request
   })
 );
