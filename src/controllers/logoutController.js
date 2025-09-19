@@ -6,7 +6,7 @@ export default function logout(req, res) {
     // Clear refresh token cookie
     res.clearCookie("refreshToken", {
       httpOnly: true,
-      secure: false, // Set to true in production
+      secure: true,
       sameSite: "Lax",
       path: "/",
     });
