@@ -7,6 +7,7 @@ import logoutRoutes from "./routes/logoutRoutes.js";
 import contactsRoutes from "./routes/contactsRoutes.js";
 import authMiddleware from "./middlewares/authMiddleware.js";
 import refreshRoutes from "./routes/refreshRoutes.js";
+import deleteAccountRoutes from "./routes/deleteAccountRoutes.js";
 
 /*
  * Global settings
@@ -29,6 +30,7 @@ app.use("/auth", loginRoutes);
 app.use("/auth", logoutRoutes);
 app.use("/auth", refreshRoutes);
 app.use("/auth", authMiddleware, contactsRoutes);
+app.use("/auth", authMiddleware, deleteAccountRoutes);
 
 // Global error handler
 

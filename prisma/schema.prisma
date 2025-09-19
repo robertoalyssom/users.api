@@ -14,7 +14,7 @@ model Contact {
   email String @unique
   name  String
   age   String
-  ownerAccount UserAccount? @relation(fields: [ownerAccountId], references: [id])
+  ownerAccount UserAccount? @relation(fields: [ownerAccountId], references: [id], onDelete: Cascade)
   ownerAccountId String? @db.ObjectId
 }
 
