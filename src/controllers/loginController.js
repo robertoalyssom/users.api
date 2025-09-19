@@ -26,7 +26,7 @@ export async function login(req, res) {
 
     // Generate access and refresh tokens
     const token = generateToken({ id: userAccount.id }, "1m");
-    const refreshToken = generateToken({ id: userAccount.id }, "2m");
+    const refreshToken = generateToken({ id: userAccount.id }, "3m");
 
     // Set refresh token in HTTP-only cookie
     res.cookie("refreshToken", refreshToken, {
